@@ -1,14 +1,14 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import { Home } from './Components/Home'
 
 function App() {
 
 
   return (
-    <>
-      <div className='w-full h-[100vh] bg-slate-800'>
-        <p className='font-bold text-4xl text-violet-700'>Çalışıyor</p>
-      </div>
-    </>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+    </Routes>
   )
 }
 
