@@ -22,7 +22,7 @@ function App() {
 
   if (isLoading || !data) {
     return (
-      <div className="spinner-container w-full h-full flex items-center justify-center">
+      <div className="spinner-container">
         <div className="spinner">
         <div className="spinner">
           <div className="spinner">
