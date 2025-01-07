@@ -23,11 +23,15 @@ export const Header = () => {
   }
 
   return (
-    <div className="w-full flex items-center justify-between p-6 md:px-16 md:py-14">
-      <div className="flex items-center gap-2">
+    <div className="w-full flex items-center justify-between p-6 md:px-16 md:py-14 border-b-2">
+      <h1 className="bg-gradient-to-r from-lime-500 to-lime-700 p-4 font-[Pacifico] text-xl lg:text-4xl text-white rounded-full shadow-lg">
+  Furkan Güven
+</h1>
+
+      {/* <div className="flex items-center gap-2">
         <p className="flex items-center justify-center text-white font-[Ribeye] w-12 h-12 text-2xl md:w-14 md:h-14 md:text-4xl rounded-full bg-blue-500">F</p>
         <p className="text-2xl md:text-4xl text-white font-[Poppins]"><span className="font-bold">Fur</span>kan</p>
-      </div>
+      </div> */}
       <div className="flex gap-3 lg:gap-8 items-center justify-between">
         <div className="hidden md:flex flex-row gap-3 lg:gap-8">
           <button type="button" className="headerBtn" onClick={()=>(navClick("/"))}>{lang == "english" ? "Home" : "Ana Sayfa"}</button>
@@ -41,7 +45,7 @@ export const Header = () => {
                     hover:bg-gray-50 hover:border-gray-400 
                     transition-all duration-300 ease-in-out
                     shadow-sm hover:shadow
-                    flex items-center space-x-1 text-sm font-medium font-sans"
+                    flex items-center space-x-1 text-sm font-medium font-[Pacifico]"
         >
           <span>{lang === "english" ? "TR" : "ENG"}</span>
         </button>        <div className="flex md:hidden items center">

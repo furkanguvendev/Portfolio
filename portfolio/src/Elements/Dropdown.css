@@ -5,8 +5,8 @@
   --burger-line-width: 1.125em;
   --burger-line-height: 0.125em;
   --burger-offset: 0.625em;
-  --burger-bg: #007ced;
-  --burger-color: #ccc;
+  --burger-bg: #5f941a;
+  --burger-color: #dbdbdb;
   --burger-line-border-radius: 0.1875em;
   --burger-diameter: 2.125em;
   --burger-btn-border-radius: calc(var(--burger-diameter) / 2);
@@ -25,7 +25,7 @@
   --nav-border-width: 0.0625em;
   --nav-shadow-color: rgba(0, 0, 0, 0.2);
   --nav-shadow-width: 0 1px 5px;
-  --nav-bg: #007ced;
+  --nav-bg: #5f941a;
   --nav-font-family: Menlo, Roboto Mono, monospace;
   --nav-default-scale: 0.8;
   --nav-active-scale: 1;
@@ -44,7 +44,7 @@
   --nav-button-border-radius: 0.375em;
   --nav-button-font-size: 12px;
   --nav-button-hover-bg: #6079a8;
-  --nav-button-hover-text-color: #ccc;
+  --nav-button-hover-text-color: #fff;
   --nav-button-distance: 0.875em;
   /* underline */
   --underline-border-width: 0.0625em;
