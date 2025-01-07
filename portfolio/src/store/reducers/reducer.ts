@@ -1,32 +1,30 @@
-import {ActionTypes, TURKISH, ENGLISH, MODE, LANGUAGE} from "../actions/action.ts";
+import { ActionTypes, MYINFO, LANGUAGE, DataState } from "../actions/action";
 
-const initialLanguage = localStorage.getItem("language") || "english";
+const initialLanguage: keyof DataState =
+  (localStorage.getItem("language") as keyof DataState) || "english";
 
 const initialState = {
-    language: initialLanguage,
-    darkMode: false,
-    myData: null as object | null,
-}
+  language: initialLanguage,
+  data: { turkish: null, english: null } as DataState,
+  myData: null as object | null,
+};
 
 export const reducer = (state = initialState, action: ActionTypes) => {
-    switch (action.type) {
-        case LANGUAGE:
-            return {...state, language: action.payload};
-        case MODE:
-            return {...state, darkMode: action.payload};
-        case TURKISH:
-            localStorage.setItem("language", "turkish");
-            return {
-                ...state,
-                language: "turkish",
-                myData:action.payload,
-            };
-        case ENGLISH:
-            localStorage.setItem("language", "english");
-            return {
-                ...state,
-                language: "english",
-                myData:action.payload,
-            }
-    }
-}
+  switch (action.type) {
+    case LANGUAGE:
+      localStorage.setItem("language", action.payload);
+      return {
+        ...state,
+        language: action.payload,
+        myData: state.data[action.payload],
+      };
+    case MYINFO:
+      return {
+        ...state,
+        data: action.payload,
+        myData: action.payload[state.language],
+      };
+    default:
+      return state;
+  }
+};
