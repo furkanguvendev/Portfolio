@@ -14,7 +14,7 @@ interface defaultInfo {
 
 export const Home = () => {
 
-  const info: defaultInfo = useSelector((state: RootState)=>(state.myData));
+  const info = useSelector((state: RootState)=>(state.myData)) as defaultInfo;
 
   return (
     <div className="w-full h-full flex flex-col min-h-screen justify-between md:items-center">

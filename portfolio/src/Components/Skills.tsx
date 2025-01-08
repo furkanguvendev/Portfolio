@@ -3,10 +3,74 @@ import { Footer } from "../Layers/Footer"
 import { Header } from "../Layers/Header"
 import { RootState } from "../store/store"
 
+interface defaultSkills {
+    skills: [
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        },
+        {
+            name:"",
+            iconLink:""
+        }
+    ];
+};
 
 export const Skills = () => {
 
-    const skillData = useSelector((state: RootState)=>(state.myData));
+    const skillData = useSelector((state: RootState)=>(state.myData)) as defaultSkills;
 
   return (
     <div className="w-full h-full flex flex-col min-h-screen justify-between md:items-center">

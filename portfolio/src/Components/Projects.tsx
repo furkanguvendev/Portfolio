@@ -4,8 +4,37 @@ import { ProjectCard } from "../Elements/ProjectCard";
 import { Header } from "../Layers/Header";
 import { Footer } from "../Layers/Footer";
 
+interface defaultProject {
+  projects: [
+    {
+      name:"",
+      description:"",
+      image:"",
+      technologies: string[],
+      link:"",
+      github:""
+    },
+    {
+      name:"",
+      description:"",
+      image:"",
+      technologies: string[],
+      link:"",
+      github:""
+    },
+    {
+      name:"",
+      description:"",
+      image:"",
+      technologies: string[],
+      link:"",
+      github:""
+    }
+  ]
+}
+
 export const Projects = () => {
-  const projectData = useSelector((state: RootState) => state.myData);
+  const projectData = useSelector((state: RootState) => state.myData) as defaultProject;
 
   return (
     <div>
