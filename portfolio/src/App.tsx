@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "./store/store";
 import { useEffect, useState } from "react";
 import { getData } from "./store/actions/action";
+import { Skills } from "./Components/Skills";
+import { Projects } from "./Components/Projects";
+import { Aboutme } from "./Components/Aboutme";
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
@@ -41,6 +44,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/skills" element={<Skills />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/aboutme" element={<Aboutme />} />
     </Routes>
   );
 }

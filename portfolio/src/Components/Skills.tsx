@@ -1,0 +1,25 @@
+import { useSelector } from "react-redux"
+import { Footer } from "../Layers/Footer"
+import { Header } from "../Layers/Header"
+import { RootState } from "../store/store"
+
+
+export const Skills = () => {
+
+    const skillData = useSelector((state: RootState)=>(state.myData));
+
+  return (
+    <div className="w-full h-full flex flex-col min-h-screen justify-between md:items-center">
+        <Header/>
+        <div className="grid grid-flow-row grid-cols-3 md:grid-flow-row md:grid-cols-5 gap-9 px-1 py-9 md:py-6 md:gap-x-28">
+            {Object.entries(skillData.skills).map((item)=>(
+                <div className="flex flex-col gap-4 items-center">
+                    <img className="w-16 h-16 md:w-32 md:h-32" src={item[1].iconLink}/>
+                    <p className="text-white text-xl">{item[1].name}</p>
+                </div>
+            ))}
+        </div>
+        <Footer/>
+    </div>
+  )
+}
