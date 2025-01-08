@@ -23,7 +23,7 @@ export const Header = () => {
   }
 
   return (
-    <div className="w-full flex items-center justify-between p-6 md:px-16 md:py-14 border-b-2">
+    <div className="w-full flex items-center justify-between p-6 md:px-16 md:py-12 border-b-2">
       <h1 className="bg-gradient-to-r from-lime-500 to-lime-700 p-4 font-[Pacifico] text-xl lg:text-4xl text-white rounded-full shadow-lg">
   Furkan Güven
 </h1>

@@ -1,6 +1,4 @@
-/* From Uiverse.io by Galahhad */
-/* The design is inspired from the mockapi.io */
-
+/* Genel Ayarlar */
 .popup {
   --burger-line-width: 1.125em;
   --burger-line-height: 0.125em;
@@ -11,13 +9,12 @@
   --burger-diameter: 2.125em;
   --burger-btn-border-radius: calc(var(--burger-diameter) / 2);
   --burger-line-transition: 0.3s;
-  --burger-transition: all 0.1s ease-in-out;
+  --burger-transition: all 0.2s ease-in-out;
   --burger-hover-scale: 1.1;
   --burger-active-scale: 0.95;
   --burger-enable-outline-color: var(--burger-bg);
   --burger-enable-outline-width: 0.125em;
   --burger-enable-outline-offset: var(--burger-enable-outline-width);
-  /* nav */
   --nav-padding-x: 0.25em;
   --nav-padding-y: 0.625em;
   --nav-border-radius: 0.375em;
@@ -29,16 +26,10 @@
   --nav-font-family: Menlo, Roboto Mono, monospace;
   --nav-default-scale: 0.8;
   --nav-active-scale: 1;
-  --nav-position-left: 0;
-  --nav-position-right: unset;
-  /* if you want to change sides just switch one property */
-  /* from properties to "unset" and the other to 0 */
-  /* title */
   --nav-title-size: 0.625em;
   --nav-title-color: #ffffff;
   --nav-title-padding-x: 1rem;
   --nav-title-padding-y: 0.25em;
-  /* nav button */
   --nav-button-padding-x: 1rem;
   --nav-button-padding-y: 0.375em;
   --nav-button-border-radius: 0.375em;
@@ -46,27 +37,26 @@
   --nav-button-hover-bg: #6079a8;
   --nav-button-hover-text-color: #fff;
   --nav-button-distance: 0.875em;
-  /* underline */
   --underline-border-width: 0.0625em;
   --underline-border-color: #ccc;
   --underline-margin-y: 0.3125em;
+  z-index: 50;
 }
 
-/* popup settings 👆 */
-
+/* Popup Genel */
 .popup {
   display: inline-block;
-  text-rendering: optimizeLegibility;
   position: relative;
+  text-rendering: optimizeLegibility;
 }
 
 .popup input {
   display: none;
 }
 
+/* Burger Menüsü */
 .burger {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
   background: var(--burger-bg);
@@ -75,6 +65,7 @@
   border-radius: var(--burger-btn-border-radius);
   border: none;
   cursor: pointer;
+  position: relative;
   overflow: hidden;
   transition: var(--burger-transition);
   outline: var(--burger-enable-outline-width) solid transparent;
@@ -103,6 +94,7 @@
   transform: translateY(-50%);
 }
 
+/* Popup İçerik */
 .popup-window {
   transform: scale(var(--nav-default-scale));
   visibility: hidden;
@@ -111,16 +103,13 @@
   padding: var(--nav-padding-y) var(--nav-padding-x);
   background: var(--nav-bg);
   font-family: var(--nav-font-family);
-  color: var(--nav-text-color);
+  color: var(--burger-color);
   border-radius: var(--nav-border-radius);
   box-shadow: var(--nav-shadow-width) var(--nav-shadow-color);
   border: var(--nav-border-width) solid var(--nav-border-color);
-  top: calc(
-    var(--burger-diameter) + var(--burger-enable-outline-width) +
-      var(--burger-enable-outline-offset)
-  );
-  left: unset;
+  top: calc(var(--burger-diameter) + var(--burger-enable-outline-width) + var(--burger-enable-outline-offset));
   right: 0;
+  z-index: 60;
   transition: var(--burger-transition);
 }
 
@@ -154,37 +143,17 @@
   column-gap: var(--nav-button-distance);
 }
 
-.popup-window ul li:nth-child(1) svg,
-.popup-window ul li:nth-child(2) svg {
-  color: cornflowerblue;
-}
-
-.popup-window ul li:nth-child(4) svg,
-.popup-window ul li:nth-child(5) svg {
-  color: rgb(153, 153, 153);
-}
-
-.popup-window ul li:nth-child(7) svg {
-  color: red;
+.popup-window ul li {
+  margin: 0;
 }
 
 .popup-window hr {
   margin: var(--underline-margin-y) 0;
   border: none;
-  border-bottom: var(--underline-border-width) solid
-    var(--underline-border-color);
+  border-bottom: var(--underline-border-width) solid var(--underline-border-color);
 }
 
-/* actions */
-
-.popup-window ul button:hover,
-.popup-window ul button:focus-visible,
-.popup-window ul button:hover svg,
-.popup-window ul button:focus-visible svg {
-  color: var(--nav-button-hover-text-color);
-  background: var(--nav-button-hover-bg);
-}
-
+/* Hover ve Aktif Durumlar */
 .burger:hover {
   transform: scale(var(--burger-hover-scale));
 }
@@ -209,9 +178,7 @@
 }
 
 .popup input:checked + .burger span:nth-child(3) {
-  transform: translateX(
-    calc(var(--burger-diameter) * -1 - var(--burger-line-width))
-  );
+  transform: translateX(calc(var(--burger-diameter) * -1 - var(--burger-line-width)));
 }
 
 .popup input:checked ~ nav {
