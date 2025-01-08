@@ -19,7 +19,7 @@ export const Home = () => {
   return (
     <div className="w-full h-full flex flex-col min-h-screen justify-between md:items-center">
         <Header/>
-        <div className="flex flex-col lg:flex-row my-8 gap-20 items-center md:w-3/5">
+        <div className="flex flex-col 2xl:flex-row my-8 gap-20 items-center md:w-3/5">
           <img
             src={foto}
             className="w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 aspect-square object-cover border-4 rounded-full border-lime-600"
