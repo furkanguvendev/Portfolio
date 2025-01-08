@@ -4,8 +4,23 @@ import { Header } from "../Layers/Header";
 import { Footer } from "../Layers/Footer";
 import { Award, MapPin, GraduationCap, User, Calendar } from "lucide-react";
 
+interface AboutData {
+  personal: {
+    aboutMe: string;
+    aboutMe1: string;
+    nameText: string;
+    fullName: string;
+    bornText: string;
+    born: string;
+    liveText: string;
+    live: string;
+    educationText: string;
+    education: string;
+    certificate: string[];
+  };
+}
 export const Aboutme = () => {
-  const aboutData = useSelector((state: RootState) => state.myData);
+  const aboutData: AboutData = useSelector((state: RootState) => state.myData);
 
   return (
     <div className="min-h-screen">

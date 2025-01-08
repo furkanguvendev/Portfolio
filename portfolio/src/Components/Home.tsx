@@ -4,7 +4,7 @@ import { Header } from "../Layers/Header"
 import { RootState } from "../store/store"
 import foto from "../assets/me.png";
 
-const defaultInfo = {
+interface defaultInfo {
   about: {
     title: "Default Title",
     content1: "Default Content 1",
@@ -14,7 +14,7 @@ const defaultInfo = {
 
 export const Home = () => {
 
-  const info = useSelector((state: RootState)=>(state.myData));
+  const info: defaultInfo = useSelector((state: RootState)=>(state.myData));
 
   return (
     <div className="w-full h-full flex flex-col min-h-screen justify-between md:items-center">
@@ -24,11 +24,11 @@ export const Home = () => {
             src={foto}
             className="w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 aspect-square object-cover border-4 rounded-full border-lime-600"
           />
-          <div className="flex flex-col gap-3 font-serif text-white px-6 md:px-0">
+          {info != null ?  <div className="flex flex-col gap-3 font-serif text-white px-6 md:px-0">
             <h1 className="text-2xl md:text-4xl">{info.about.title}</h1>
             <p className="text-lg md:text-2xl">{info.about.content1}</p>
             <p className="text-lg md:text-2xl">{info.about.content2}</p>
-          </div>
+          </div> : <p>Henüz işlem tamamlanmadı!</p>}
         </div>
         <Footer/>
     </div> 
