@@ -24,7 +24,7 @@ export const Header = () => {
 
   return (
     <div className="w-full flex items-center justify-between p-6 md:px-16 md:py-12 border-b-2">
-      <h1 className="bg-gradient-to-r from-lime-500 to-lime-700 p-4 font-[Pacifico] text-xl lg:text-4xl text-white rounded-full shadow-lg">
+      <h1 className="bg-gradient-to-r from-lime-500 to-lime-700 p-4 font-mono text-xl lg:text-4xl text-white rounded-full shadow-lg">
   Furkan Güven
 </h1>
 
@@ -45,7 +45,7 @@ export const Header = () => {
                     hover:bg-gray-50 hover:border-gray-400 
                     transition-all duration-300 ease-in-out
                     shadow-sm hover:shadow
-                    flex items-center space-x-1 text-sm font-medium font-[Pacifico]"
+                    flex items-center space-x-1 text-sm font-medium font-mono"
         >
           <span>{lang === "english" ? "TR" : "ENG"}</span>
         </button>        <div className="flex md:hidden items center">

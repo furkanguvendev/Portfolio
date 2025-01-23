@@ -7,7 +7,7 @@
 }
 
 .headerBtn {
-  @apply text-xl font-[Pacifico] text-lime-600;
+  @apply text-xl font-mono text-lime-600;
 }
 
 /* Loading */
@@ -43,6 +43,5 @@
     transform: rotate(360deg);
   }
 }
-
 
 /* Loading */
