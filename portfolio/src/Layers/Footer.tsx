@@ -4,7 +4,8 @@ import { SiGmail } from "react-icons/si";
 
 export const Footer = () => {
   return (
-    <footer className="w-full p-4 text-white border-t-2 md:flex justify-between items-center font-serif">
+    <footer className="w-full p-4 text-white border-t-2 border-white relative overflow-hidden md:flex justify-between items-center font-serif">
+      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-lime-500 to-transparent animate-border-glow"></div>
       <div className="text-center">
         <p className="text-sm">📧 furkanguven.dev@gmail.com</p>
         <p className="text-sm">📍 İstanbul, Türkiye</p>

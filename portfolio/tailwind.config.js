@@ -1,8 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  content: ["./src/**/*.{js,ts,jsx,tsx}"], // Projene göre yolları güncelle
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        borderGlow: {
+          "0%": { left: "-100%" },
+          "100%": { left: "100%" },
+        },
+      },
+      animation: {
+        "border-glow": "borderGlow 1.5s linear infinite",
+      },
+    },
   },
   plugins: [],
 };
