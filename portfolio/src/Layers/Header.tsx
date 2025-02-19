@@ -23,8 +23,8 @@ export const Header = () => {
   }
 
   return (
-    <div className="w-full flex items-center justify-between p-6 md:px-16 md:py-12 border-b-2 border-white relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-lime-500 to-transparent animate-border-glow"></div>
+    <div className="w-full flex items-center justify-between p-6 md:px-16 md:py-12 border-b-2 border-white relative">
+      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-lime-500 to-transparent animate-border-glow z-10"></div>
       <h1 className="bg-gradient-to-r from-lime-500 to-lime-700 p-4 font-mono text-xl lg:text-4xl text-white rounded-full shadow-lg">
   Furkan Güven
 </h1>
