@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import { Footer } from "../Layers/Footer"
 import { Header } from "../Layers/Header"
 import { RootState } from "../store/store"
-import foto from "../assets/me.png";
+import foto from "../assets/me1.png";
 
 interface defaultInfo {
   about: {
