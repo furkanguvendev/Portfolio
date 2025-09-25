@@ -21,7 +21,7 @@ export const Footer = () => {
           Linkedin
         </a>
         <a
-          href="https://github.com/furkanguvenme"
+          href="https://github.com/furkanguvendev"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-gray-400"
