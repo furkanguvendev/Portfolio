@@ -8,6 +8,7 @@ interface AboutData {
   personal: {
     aboutMe: string;
     aboutMe1: string;
+    aboutMe2: string;
     nameText: string;
     fullName: string;
     bornText: string;
@@ -22,6 +23,7 @@ interface AboutData {
 
 export const Aboutme = () => {
   const aboutData = useSelector((state: RootState) => state.myData) as AboutData;
+  const lang = localStorage.getItem("language");
 
   if (!aboutData) {
     return (
@@ -40,13 +42,16 @@ export const Aboutme = () => {
           <div className="absolute inset-0 bg-[#5f941a] opacity-10 rounded-3xl"></div>
           <div className="relative bg-white/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-[#5f941a]/20">
             <h1 className="text-4xl md:text-5xl font-bold text-[#222222] mb-6">
-              About Me
+              {lang == "english" ? "About Me" : "Hakkımda"}
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               {aboutData.personal.aboutMe}
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
               {aboutData.personal.aboutMe1}
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {aboutData.personal.aboutMe2}
             </p>
           </div>
         </div>
@@ -56,7 +61,7 @@ export const Aboutme = () => {
           <div className="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-[1.02] transition-all duration-300 flex flex-col items-center">
             <h2 className="text-2xl font-bold text-[#5f941a] mb-6 flex items-center gap-2">
               <User className="w-6 h-6" />
-              Personal Information
+              {lang == "english" ? "Personal Information" : "Kişisel Bilgiler"}
             </h2>
             <div className="space-y-4 flex flex-col items-center">
               <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
@@ -106,7 +111,7 @@ export const Aboutme = () => {
           <div className="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-[1.02] transition-all duration-300">
             <h2 className="text-2xl font-bold text-[#5f941a] mb-6 flex items-center gap-2 justify-center">
               <Award className="w-6 h-6" />
-              Certificates
+              {lang == "english" ? "Certificates" : "Sertifikalar"}
             </h2>
             <div className="space-y-4 flex flex-col items-center">
               {aboutData.personal.certificate.map((cert, index) => (
