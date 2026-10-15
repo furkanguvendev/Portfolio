@@ -22,6 +22,13 @@ const tr = {
     email: 'E-posta gönder',
     cv: 'CV İndir',
   },
+    projects: {
+    label: 'Projeler',
+    title: 'Seçtiğim çalışmalar.',
+    fullstack: 'Full-stack',
+    frontend: 'Frontend',
+    demo: 'Canlı Demo',
+  },
 }
 
 const en: typeof tr = {
@@ -47,6 +54,13 @@ const en: typeof tr = {
     text: 'Feel free to reach out about a position, a project, or just to say hi.',
     email: 'Send an email',
     cv: 'Download CV',
+  },
+    projects: {
+    label: 'Projects',
+    title: 'Selected work.',
+    fullstack: 'Full-stack',
+    frontend: 'Frontend',
+    demo: 'Live Demo',
   },
 }
 

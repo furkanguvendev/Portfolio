@@ -1,8 +1,7 @@
-import { motion, useMotionTemplate, useMotionValue } from 'motion/react'
+import { motion } from 'motion/react'
 import { useT } from '../../hooks/useT'
 import { useLangStore } from '../../store/useLangStore'
 import { profile } from '../../data/profile'
-import type { MouseEvent } from 'react'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -41,32 +40,11 @@ function RevealText({ text, className = '' }: { text: string; className?: string
 }
 
 export default function Hero() {
-  const x = useMotionValue(-1000)
-  const y = useMotionValue(-1000)
   const t = useT()
   const lang = useLangStore((s) => s.lang)
 
-  const spotlight = useMotionTemplate`radial-gradient(450px circle at ${x}px ${y}px, rgba(251,191,36,0.14), transparent 70%)`
-
-  const handleMouseMove = (e: MouseEvent<HTMLElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    x.set(e.clientX - rect.left)
-    y.set(e.clientY - rect.top)
-  }
-
   return (
-    <section
-      id="home"
-      onMouseMove={handleMouseMove}
-      className="relative min-h-svh flex items-center overflow-hidden"
-    >
-      {/* İmleci takip eden ışık */}
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{ background: spotlight }}
-      />
-
+    <section id="home" className="relative min-h-svh flex items-center overflow-hidden">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -77,7 +55,6 @@ export default function Hero() {
           {t.hero.role}
         </motion.p>
 
-        {/* key={lang}: dil değişince başlık animasyonu yeniden oynar */}
         <h1
           key={lang}
           className="text-5xl sm:text-7xl md:text-8xl font-bold leading-[1.05] tracking-tight"
@@ -119,7 +96,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll göstergesi */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
