@@ -4,12 +4,14 @@ import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Projects from './components/sections/Projects'
 import Contact from './components/sections/Contact'
+import Spotlight from './components/layout/Spotlight'
 
 function App() {
   useLenis()
 
   return (
     <div className="bg-neutral-950 text-white">
+      <Spotlight/>
       <Navbar />
       <main>
         <Hero />

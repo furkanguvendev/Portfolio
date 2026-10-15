@@ -11,7 +11,8 @@ export default function Contact() {
   ].filter((s) => s.href)
 
   return (
-    <section id="contact" className="min-h-svh flex flex-col justify-center pt-20 md:pt-32">
+  <>
+    <section id="contact" className="py-24 md:py-40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <Reveal>
           <p className="text-amber-400 mb-4 tracking-widest text-sm uppercase">
@@ -41,7 +42,7 @@ export default function Contact() {
           )}
         </Reveal>
 
-        <Reveal delay={0.25} className="mt-8 text-neutral-400">
+        <Reveal delay={0.25} className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-neutral-400">
           <a href={`mailto:${profile.email}`} className="hover:text-white transition-colors">
             {profile.email}
           </a>
@@ -51,17 +52,18 @@ export default function Contact() {
               href={s.href}
               target="_blank"
               rel="noreferrer"
-              className="ml-6 hover:text-white transition-colors"
+              className="hover:text-white transition-colors"
             >
               {s.label}
             </a>
           ))}
         </Reveal>
       </div>
-
-      <footer className="mt-24 border-t border-white/10 py-6 text-center text-sm text-neutral-500">
-        © {new Date().getFullYear()} {profile.name}
-      </footer>
     </section>
-  )
+
+    <footer className="border-t border-white/10 py-6 text-center text-sm text-neutral-500">
+      © {new Date().getFullYear()} {profile.name}
+    </footer>
+  </>
+)
 }
