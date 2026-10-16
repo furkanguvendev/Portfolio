@@ -1,5 +1,10 @@
 const tr = {
-  nav: { home: 'Ana Sayfa', about: 'Hakkımda', projects: 'Projeler', contact: 'İletişim' },
+  nav: { 
+    home: 'Ana Sayfa', 
+    about: 'Hakkımda', 
+    projects: 'Projeler', 
+    contact: 'İletişim' 
+  },
   hero: {
     role: 'Full-stack Developer',
     greeting: 'Merhaba, ben',
@@ -14,53 +19,68 @@ const tr = {
     p2: 'Şu anda İstanbul’da 2.000’den fazla konutluk büyük bir projede mekanik şef olarak çalışıyorum. Bu süreç bana planlama, ekip koordinasyonu ve baskı altında sorun çözme konusunda çok şey kattı. AutoCAD ve SolidWorks gibi araçlarla geçen yıllarım da detaylara dikkat etmeyi öğretti.',
     p3: 'Bu disiplini yazılıma taşımak istiyorum. Junior Full-stack Developer pozisyonları arıyorum.',
   },
-  skillGroups: { frontend: 'Frontend', backend: 'Backend & Veritabanı', tools: 'Araçlar' },
-  contact: {
-    label: 'İletişim',
-    title: 'Birlikte çalışalım.',
-    text: 'Bir pozisyon, proje ya da sadece merhaba demek için bana yazabilirsin.',
-    email: 'E-posta gönder',
-    cv: 'CV İndir',
+  skillGroups: { 
+    frontend: 'Frontend', 
+    backend: 'Backend & Veritabanı', 
+    tools: 'Araçlar' 
   },
-    projects: {
+  projects: {
     label: 'Projeler',
     title: 'Seçtiğim çalışmalar.',
     fullstack: 'Full-stack',
     frontend: 'Frontend',
     demo: 'Canlı Demo',
+    code: 'Kodları İncele',
+  },
+  contact: {
+    label: 'İletişim',
+    title: 'Birlikte çalışalım.',
+    text: 'Bir pozisyon, proje ya da sadece merhaba demek için bana yazabilirsin.',
+    email: 'E-posta Gönder',
+    cv: 'CV İndir',
   },
 }
 
 const en: typeof tr = {
-  nav: { home: 'Home', about: 'About', projects: 'Projects', contact: 'Contact' },
+  nav: { 
+    home: 'Home', 
+    about: 'About', 
+    projects: 'Projects', 
+    contact: 'Contact' 
+  },
   hero: {
     role: 'Full-stack Developer',
     greeting: "Hi, I'm",
-    desc: 'I build fast, clean and smooth web applications with React, TypeScript and Spring Boot.',
+    desc: 'I build fast, clean, and smooth web applications with React, TypeScript, and Spring Boot.',
     ctaProjects: 'My Projects',
-    ctaContact: 'Contact',
+    ctaContact: 'Contact Me',
   },
   about: {
     label: 'About',
-    title: 'Bringing engineering discipline to software.',
-    p1: 'I graduated from Marmara University with a degree in Mechanical Engineering. Afterwards I completed a 6-month Full-stack Developer bootcamp at Workintech, working with Java, Spring Boot, JavaScript, React, Redux and Tailwind. Since then I have kept learning with tools like TypeScript and Zustand.',
-    p2: 'I currently work as a mechanical site chief on a large housing project of 2,000+ units in Istanbul. This role taught me a lot about planning, team coordination and solving problems under pressure. Years with tools like AutoCAD and SolidWorks also trained my attention to detail.',
-    p3: 'I want to bring this discipline into software, and I am looking for Junior Full-stack Developer roles.',
+    title: 'Bringing engineering discipline into software development.',
+    p1: 'I graduated from Marmara University with a degree in Mechanical Engineering. After graduation, I completed an intensive 6-month Full-stack Developer program at Workintech, working with Java, Spring Boot, JavaScript, React, Redux, and Tailwind CSS. Since then, I have continued expanding my skillset with TypeScript, Zustand, and modern web software tools.',
+    p2: 'I currently work as a mechanical site manager on a major residential construction project with over 2,000 units in Istanbul. This role has sharpened my skills in planning, team coordination, and high-pressure problem solving. My years of experience with design tools like AutoCAD and SolidWorks also cultivated my strong attention to detail.',
+    p3: 'I am eager to translate this engineering discipline into software development and am actively seeking opportunities as a Junior Full-Stack Developer.',
   },
-  skillGroups: { frontend: 'Frontend', backend: 'Backend & Database', tools: 'Tools' },
-  contact: {
-    label: 'Contact',
-    title: "Let's work together.",
-    text: 'Feel free to reach out about a position, a project, or just to say hi.',
-    email: 'Send an email',
-    cv: 'Download CV',
+  skillGroups: { 
+    frontend: 'Frontend', 
+    backend: 'Backend & Database', 
+    tools: 'Tools' 
   },
-    projects: {
+  projects: {
     label: 'Projects',
-    title: 'Selected work.',
+    title: 'Selected Work',
     fullstack: 'Full-stack',
     frontend: 'Frontend',
     demo: 'Live Demo',
+    code: 'Source Code',
+  },
+  contact: {
+    label: 'Contact',
+    title: "Let's Work Together",
+    text: 'Feel free to reach out about an open role, a project collaboration, or just to say hi.',
+    email: 'Send Email',
+    cv: 'Download Resume',
   },
 }
 

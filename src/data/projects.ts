@@ -1,4 +1,7 @@
 import type { Lang } from '../store/useLangStore'
+import monetaImg from '../pictures/moneta.png'
+import wearivaImg from '../pictures/weariva.png'
+import cashkonImg from '../pictures/cashkon.png'
 
 export type Project = {
   id: string
@@ -16,7 +19,7 @@ export const projects: Project[] = [
     id: 'moneta',
     name: 'Moneta',
     type: 'fullstack',
-    image: '',
+    image: monetaImg,
     desc: {
       tr: 'Kişisel bütçe planlama uygulaması. Gelir ve giderleri takip edip bütçeni yönetebilirsin. Arayüzü React ile, sunucu tarafını Java Spring Boot ile geliştirdim.',
       en: 'A personal budget planning app for tracking income and expenses. I built the interface with React and the server side with Java Spring Boot.',
@@ -32,7 +35,7 @@ export const projects: Project[] = [
     id: 'weariva',
     name: 'Weariva',
     type: 'frontend',
-    image: '',
+    image: wearivaImg,
     desc: {
       tr: 'Kurs sonrası kendimi denemek için yaptığım e-ticaret sitesi. Arayüzün tamamını ben geliştirdim, veriler eğitimde sağlanan hazır API üzerinden geliyor.',
       en: 'An e-commerce site I built after my bootcamp to test myself. I developed the entire frontend; the data comes from a ready-made API provided in the course.',
@@ -42,10 +45,10 @@ export const projects: Project[] = [
     links: [{ label: 'GitHub', href: 'https://github.com/furkanguvendev/MyEcommerce/tree/main/ecommerce' }],
   },
   {
-    id: 'cashcon',
-    name: 'Cashcon',
+    id: 'cashkon',
+    name: 'Cashkon',
     type: 'frontend',
-    image: '',
+    image: cashkonImg,
     desc: {
       tr: 'Faiz hesabı ve kredi borcu hesabı gibi finansal hesaplamaları yapabileceğin dijital bankacılık temalı bir uygulama.',
       en: 'A neobank-style app for financial calculations such as interest and loan debt.',
