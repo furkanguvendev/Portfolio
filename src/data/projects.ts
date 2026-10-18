@@ -24,7 +24,7 @@ export const projects: Project[] = [
       tr: 'Kişisel bütçe planlama uygulaması. Gelir ve giderleri takip edip bütçeni yönetebilirsin. Arayüzü React ile, sunucu tarafını Java Spring Boot ile geliştirdim.',
       en: 'A personal budget planning app for tracking income and expenses. I built the interface with React and the server side with Java Spring Boot.',
     },
-    tags: ['React', 'TypeScript', 'Zustand', 'Tailwind CSS', 'Recharts', 'Java', 'Spring Boot'],
+    tags: ['React', 'TypeScript', 'Zustand', 'Tailwind CSS', 'Recharts', 'Java', 'Spring Boot', 'Spring Security', 'JWT', 'PostgreSQL', 'Supabase'],
     demo: 'https://moneta-wallet.vercel.app/',
     links: [
       { label: 'GitHub (Frontend)', href: 'https://github.com/furkanguvendev/moneta-frontend' },
