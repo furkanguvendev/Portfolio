@@ -40,7 +40,7 @@ export const projects: Project[] = [
       tr: 'Kurs sonrası kendimi denemek için yaptığım e-ticaret sitesi. Arayüzün tamamını ben geliştirdim, veriler eğitimde sağlanan hazır API üzerinden geliyor.',
       en: 'An e-commerce site I built after my bootcamp to test myself. I developed the entire frontend; the data comes from a ready-made API provided in the course.',
     },
-    tags: ['React', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'React Router', 'Axios'],
+    tags: ['React', 'TypeScript', 'Redux' , 'Redux Thunk', 'Tailwind CSS', 'React Router', 'Axios'],
     demo: 'https://weariva.vercel.app/',
     links: [{ label: 'GitHub', href: 'https://github.com/furkanguvendev/MyEcommerce/tree/main/ecommerce' }],
   },
