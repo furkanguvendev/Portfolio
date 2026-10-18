@@ -17,8 +17,8 @@ const tr = {
     title: 'Mühendislik disiplinini yazılıma taşıyorum.',
     p1: 'Marmara Üniversitesi Makine Mühendisliği mezunuyum. Mezuniyetten sonra Workintech’te 6 aylık Full-stack Developer eğitimini tamamladım; Java, Spring Boot, JavaScript, React, Redux ve Tailwind ile çalıştım. Sonrasında TypeScript ve Zustand gibi araçlarla kendimi geliştirmeye devam ettim.',
     p2: 'Şu anda İstanbul’da 2.000’den fazla konutluk büyük bir projede mekanik şef olarak çalışıyorum. Bu süreç bana planlama, ekip koordinasyonu ve baskı altında sorun çözme konusunda çok şey kattı. AutoCAD ve SolidWorks gibi araçlarla geçen yıllarım da detaylara dikkat etmeyi öğretti.',
-    p3: 'Bu disiplini yazılıma taşımak istiyorum. Junior Full-stack Developer pozisyonları arıyorum.',
-  },
+    p3: 'Bu disiplini yazılıma taşımayı seviyorum; yeni projelere ve fırsatlara açığım.',
+    },
   skillGroups: { 
     frontend: 'Frontend', 
     backend: 'Backend & Veritabanı', 
@@ -60,7 +60,7 @@ const en: typeof tr = {
     title: 'Bringing engineering discipline into software development.',
     p1: 'I graduated from Marmara University with a degree in Mechanical Engineering. After graduation, I completed an intensive 6-month Full-stack Developer program at Workintech, working with Java, Spring Boot, JavaScript, React, Redux, and Tailwind CSS. Since then, I have continued expanding my skillset with TypeScript, Zustand, and modern web software tools.',
     p2: 'I currently work as a mechanical site manager on a major residential construction project with over 2,000 units in Istanbul. This role has sharpened my skills in planning, team coordination, and high-pressure problem solving. My years of experience with design tools like AutoCAD and SolidWorks also cultivated my strong attention to detail.',
-    p3: 'I am eager to translate this engineering discipline into software development and am actively seeking opportunities as a Junior Full-Stack Developer.',
+    p3: 'I enjoy bringing this discipline into software development and I am open to new projects and opportunities.',
   },
   skillGroups: { 
     frontend: 'Frontend', 
